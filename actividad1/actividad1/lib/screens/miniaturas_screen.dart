@@ -9,17 +9,12 @@ class MiniaturasScreen extends StatelessWidget {
     return Scaffold(
       drawer: CustomDrawer(),
       appBar: AppBar(title: const Text("Miniaturas en Columnas")),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        // Hacemos un row para poner las miniaturas en fila.
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Image.asset('assets/pelotafutbol.jpg', width: 80),
-            Image.asset('assets/pelotabaloncesto.jpg', width: 80),
-            Image.asset('assets/pelotavoley.jpg', width: 80),
-          ],
-        ),
+      body: Column(
+        children: [
+          Image.asset('assets/pelotafutbol.jpg', height:100),
+          Image.asset('assets/pelotabaloncesto.jpg', height:100),
+          Image.asset('assets/pelotavoley.jpg', height:100),
+        ],
       ),
     );
   }
