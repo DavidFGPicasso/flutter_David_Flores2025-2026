@@ -4,6 +4,9 @@ import '../screens/imagen_personal_screen.dart';
 import '../screens/miniaturas_screen.dart';
 import '../screens/iconos_fila_screen.dart';
 import '../screens/imagenes_columna_screen.dart';
+import '../screens/imagenes_dispuestas.dart';
+import '../screens/texto_overflow_screen.dart';
+
 
 // Drawer personalizado.
 class CustomDrawer extends StatelessWidget {
@@ -43,6 +46,16 @@ class CustomDrawer extends StatelessWidget {
             title: Text('Imágenes en Columnas'),
             onTap: () => Navigator.push(context,
               MaterialPageRoute(builder: (_) => ImagenesColumnaScreen())),
+          ),
+          ListTile(
+            title: Text('Imágenes dispuestas'),
+            onTap: () => Navigator.push(context,
+              MaterialPageRoute(builder: (_) => ImagenesDispuestasScreen())),
+          ),
+          ListTile(
+            title: Text('Texto Overflow'),
+            onTap: () => Navigator.push(context,
+              MaterialPageRoute(builder: (_) => TextoOverflowScreen())),
           ),
         ],
       ),
