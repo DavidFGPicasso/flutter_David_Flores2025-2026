@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../widgets/custom_drawer.dart'; 
 
 void main() {
   runApp(const MyApp());
@@ -23,6 +24,7 @@ class TextoOverflowScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const CustomDrawer(), 
       appBar: AppBar(title: const Text("Texto Overflow")),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

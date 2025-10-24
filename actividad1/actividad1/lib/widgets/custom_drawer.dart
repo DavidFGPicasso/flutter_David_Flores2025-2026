@@ -1,3 +1,5 @@
+import 'package:actividad1/screens/imagenes_responsive_screen.dart';
+import 'package:actividad1/screens/reto_container_screen.dart';
 import 'package:flutter/material.dart';
 import '../screens/nombre_apellidos_screen.dart';
 import '../screens/imagen_personal_screen.dart';
@@ -56,6 +58,16 @@ class CustomDrawer extends StatelessWidget {
             title: Text('Texto Overflow'),
             onTap: () => Navigator.push(context,
               MaterialPageRoute(builder: (_) => TextoOverflowScreen())),
+          ),
+          ListTile(
+            title: Text('Imagenes Responsive'),
+            onTap: () => Navigator.push(context,
+              MaterialPageRoute(builder: (_) => ImagenesResponsiveScreen())),
+          ),
+          ListTile(
+            title: Text('Reto Container'),
+            onTap: () => Navigator.push(context,
+              MaterialPageRoute(builder: (_) => RetoContainerScreen())),
           ),
         ],
       ),
