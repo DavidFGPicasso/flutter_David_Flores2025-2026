@@ -15,7 +15,7 @@ class ImagenesDispuestasScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: const [
             Image(
-              image: AssetImage('assets/agua.jpg'),
+              image: AssetImage('assets/images/agua.jpg'),
               width: 200,
               height: 200,
               fit: BoxFit.cover,
@@ -29,28 +29,28 @@ class ImagenesDispuestasScreen extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Image(
-              image: AssetImage('assets/agua.jpg'),
+              image: AssetImage('assets/images/agua.jpg'),
               width: 200,
               height: 200,
               fit: BoxFit.cover,
             ),
             SizedBox(height: 16),
             Image(
-              image: AssetImage('assets/raton.jpg'),
+              image: AssetImage('assets/images/raton.jpg'),
               width: 200,
               height: 200,
               fit: BoxFit.cover,
             ),
             SizedBox(height: 16),
             Image(
-              image: AssetImage('assets/raton.jpg'),
+              image: AssetImage('assets/images/raton.jpg'),
               width: 200,
               height: 200,
               fit: BoxFit.cover,
             ),
             SizedBox(height: 16),
             Image(
-              image: AssetImage('assets/raton.jpg'),
+              image: AssetImage('assets/images/raton.jpg'),
               width: 200,
               height: 200,
               fit: BoxFit.cover,

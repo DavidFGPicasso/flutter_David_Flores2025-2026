@@ -11,9 +11,9 @@ class MiniaturasScreen extends StatelessWidget {
       appBar: AppBar(title: const Text("Miniaturas en Columnas")),
       body: Column(
         children: [
-          Image.asset('assets/pelotafutbol.jpg', height:100),
-          Image.asset('assets/pelotabaloncesto.jpg', height:100),
-          Image.asset('assets/pelotavoley.jpg', height:100),
+          Image.asset('assets/images/pelotafutbol.jpg', height:100),
+          Image.asset('assets/images/pelotabaloncesto.jpg', height:100),
+          Image.asset('assets/images/pelotavoley.jpg', height:100),
         ],
       ),
     );

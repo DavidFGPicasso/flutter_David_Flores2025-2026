@@ -12,11 +12,11 @@ class ImagenesColumnaScreen extends StatelessWidget {
       // Hacemos una columna para guardar las imágenes en columnas.
       body: Column(
         children: [
-          Image.asset('assets/perro.jpg', height: 100),
-          Image.asset('assets/gato.jpg', height: 100),
-          Image.asset('assets/cerdo.jpg', height: 100),
-          Image.asset('assets/caballo.jpg', height: 100),
-          Image.asset('assets/vaca.jpg', height: 100),
+          Image.asset('assets/images/perro.jpg', height: 100),
+          Image.asset('assets/images/gato.jpg', height: 100),
+          Image.asset('assets/images/cerdo.jpg', height: 100),
+          Image.asset('assets/images/caballo.jpg', height: 100),
+          Image.asset('assets/images/vaca.jpg', height: 100),
         ],
       ),
     );

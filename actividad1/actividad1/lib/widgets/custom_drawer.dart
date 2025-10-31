@@ -1,16 +1,17 @@
-import 'package:actividad1/screens/imagenes_responsive_screen.dart';
-import 'package:actividad1/screens/reto_container_screen.dart';
 import 'package:flutter/material.dart';
-import '../screens/nombre_apellidos_screen.dart';
-import '../screens/imagen_personal_screen.dart';
-import '../screens/miniaturas_screen.dart';
+
 import '../screens/iconos_fila_screen.dart';
+import '../screens/imagen_personal_screen.dart';
 import '../screens/imagenes_columna_screen.dart';
 import '../screens/imagenes_dispuestas.dart';
+import '../screens/imagenes_responsive_screen.dart';
+import '../screens/miniaturas_screen.dart';
+import '../screens/nombre_apellidos_screen.dart';
+import '../screens/ventana_instagram_screen.dart';
+import '../screens/reto_container_screen.dart';
 import '../screens/texto_overflow_screen.dart';
+import 'package:actividad1/screens/contador_screen.dart';
 
-
-// Drawer personalizado.
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
 
@@ -18,57 +19,88 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        // Introducimos las secciones del drawer.
         children: [
-          DrawerHeader(
+          const DrawerHeader(
             decoration: BoxDecoration(color: Colors.indigo),
             child: Text('Menú', style: TextStyle(fontSize: 24, color: Colors.white)),
           ),
           ListTile(
-            title: Text('Nombre y Apellidos'),
-            onTap: () => Navigator.push(context,
-              MaterialPageRoute(builder: (_) => NombreApellidosScreen())),
+            title: const Text('Nombre y Apellidos'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const NombreApellidosScreen()),
+            ),
           ),
           ListTile(
-            title: Text('Imagen Personal'),
-            onTap: () => Navigator.push(context,
-              MaterialPageRoute(builder: (_) => ImagenPersonalScreen())),
+            title: const Text('Imagen Personal'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const ImagenPersonalScreen()),
+            ),
           ),
           ListTile(
-            title: Text('Miniaturas en Columnas'),
-            onTap: () => Navigator.push(context,
-              MaterialPageRoute(builder: (_) => MiniaturasScreen())),
+            title: const Text('Miniaturas en Columnas'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const MiniaturasScreen()),
+            ),
           ),
           ListTile(
-            title: Text('Iconos en Filas'),
-            onTap: () => Navigator.push(context,
-              MaterialPageRoute(builder: (_) => IconosFilaScreen())),
+            title: const Text('Iconos en Filas'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const IconosFilaScreen()),
+            ),
           ),
           ListTile(
-            title: Text('Imágenes en Columnas'),
-            onTap: () => Navigator.push(context,
-              MaterialPageRoute(builder: (_) => ImagenesColumnaScreen())),
+            title: const Text('Imágenes en Columnas'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const ImagenesColumnaScreen()),
+            ),
           ),
           ListTile(
-            title: Text('Imágenes dispuestas'),
-            onTap: () => Navigator.push(context,
-              MaterialPageRoute(builder: (_) => ImagenesDispuestasScreen())),
+            title: const Text('Imágenes dispuestas'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const ImagenesDispuestasScreen()),
+            ),
           ),
           ListTile(
-            title: Text('Texto Overflow'),
-            onTap: () => Navigator.push(context,
-              MaterialPageRoute(builder: (_) => TextoOverflowScreen())),
+            title: const Text('Texto Overflow'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const TextoOverflowScreen()),
+            ),
           ),
           ListTile(
-            title: Text('Imagenes Responsive'),
-            onTap: () => Navigator.push(context,
-              MaterialPageRoute(builder: (_) => ImagenesResponsiveScreen())),
+            title: const Text('Imagenes Responsive'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const ImagenesResponsiveScreen()),
+            ),
           ),
           ListTile(
-            title: Text('Reto Container'),
-            onTap: () => Navigator.push(context,
-              MaterialPageRoute(builder: (_) => RetoContainerScreen())),
+            title: const Text('Reto Container'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const RetoContainerScreen()),
+            ),
           ),
+          ListTile(
+            title: const Text('Contador de clics'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const ContadorScreen()),
+            ),
+          ),
+          ListTile(
+            title: const Text('Perfil tipo Instagram'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const VentanaInstagramScreen()),
+            ),
+  ),
         ],
       ),
     );

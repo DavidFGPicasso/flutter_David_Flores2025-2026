@@ -18,7 +18,7 @@ class ImagenPersonalScreen extends StatelessWidget {
             const CircleAvatar(
               radius: 80,
               // Imagen de fondo.
-              backgroundImage: AssetImage('assets/imagenrepresenta.jpg'), 
+              backgroundImage: AssetImage('assets/images/imagenrepresenta.jpg'),
             ),
             const SizedBox(height: 20),
             // Texto con el nombre.

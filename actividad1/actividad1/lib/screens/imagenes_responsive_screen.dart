@@ -31,7 +31,7 @@ class ImagenesResponsiveScreen extends StatelessWidget {
                   Column(
                     children: [
                       Image.asset(
-                        'assets/mango.jpg',
+                        'assets/images/mango.jpg',
                         width: imagenWidth,
                         height: imagenHeight,
                         fit: BoxFit.contain,
@@ -50,7 +50,7 @@ class ImagenesResponsiveScreen extends StatelessWidget {
                   Column(
                     children: [
                       Image.asset(
-                        'assets/fresa.jpg',
+                        'assets/images/fresa.jpg',
                         width: imagenWidth,
                         height: imagenHeight,
                         fit: BoxFit.contain,
@@ -63,7 +63,7 @@ class ImagenesResponsiveScreen extends StatelessWidget {
                   Column(
                     children: [
                       Image.asset(
-                        'assets/manzana.jpg',
+                        'assets/images/manzana.jpg',
                         width: imagenWidth,
                         height: imagenHeight,
                         fit: BoxFit.contain,
@@ -82,7 +82,7 @@ class ImagenesResponsiveScreen extends StatelessWidget {
                   Column(
                     children: [
                       Image.asset(
-                        'assets/melon.jpg',
+                        'assets/images/melon.jpg',
                         width: imagenWidth,
                         height: imagenHeight,
                         fit: BoxFit.contain,
@@ -95,7 +95,7 @@ class ImagenesResponsiveScreen extends StatelessWidget {
                   Column(
                     children: [
                       Image.asset(
-                        'assets/naranja.jpg',
+                        'assets/images/naranja.jpg',
                         width: imagenWidth,
                         height: imagenHeight,
                         fit: BoxFit.contain,
@@ -108,7 +108,7 @@ class ImagenesResponsiveScreen extends StatelessWidget {
                   Column(
                     children: [
                       Image.asset(
-                        'assets/platano.jpg',
+                        'assets/images/platano.jpg',
                         width: imagenWidth,
                         height: imagenHeight,
                         fit: BoxFit.contain,
