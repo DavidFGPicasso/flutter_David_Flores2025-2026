@@ -8,7 +8,7 @@ class ImagenesDispuestasScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const CustomDrawer(),
-      appBar: AppBar(title: const Text("Imágenes Repetidas")),
+      appBar: AppBar(title: const Text("Imágenes Dispuestas")),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(

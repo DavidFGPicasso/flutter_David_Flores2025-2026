@@ -17,7 +17,7 @@ class ImagenesResponsiveScreen extends StatelessWidget {
 
     return Scaffold(
       drawer: const CustomDrawer(),
-      appBar: AppBar(title: const Text('Pirámide de Imágenes')),
+      appBar: AppBar(title: const Text('Imágenes Responsive')),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
