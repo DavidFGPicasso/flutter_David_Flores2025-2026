@@ -63,7 +63,7 @@ class MyAppState extends State<MyApp> {
     ),
   );
 
-  // Cambiar el tema a un color específico.
+  // Cambiamos el tema a un color específico.
   void changeTheme(Color color) {
     setState(() {
       currentTheme = ThemeData(
