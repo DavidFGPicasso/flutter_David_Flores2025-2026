@@ -1,8 +1,8 @@
-// lib/screens/colores_aleatorios_screen.dart
 import 'package:flutter/material.dart';
 import '../../widgets/custom_drawer.dart';
 import 'dart:math';
 import 'dart:async';
+
 
 class ColoresAleatoriosScreen extends StatefulWidget {
   const ColoresAleatoriosScreen({super.key});

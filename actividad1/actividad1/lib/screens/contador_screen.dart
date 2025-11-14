@@ -31,16 +31,22 @@ class _ContadorScreenState extends State<ContadorScreen> {
 
   @override
   Widget build(BuildContext context) {
+    
+    final Color primaryColor = Theme.of(context).appBarTheme.backgroundColor ?? Colors.green;
+
     return Scaffold(
-      drawer: CustomDrawer(),
+      drawer: const CustomDrawer(),
       appBar: AppBar(
         title: const Text('Contador de clics'),
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: primaryColor, 
       ),
       body: Center(
         child: Text(
           'Has hecho clic $_contador veces',
-          style: const TextStyle(fontSize: 24),
+          style: TextStyle(
+            fontSize: 24,
+            color: primaryColor, 
+          ),
         ),
       ),
       floatingActionButton: Row(
@@ -49,7 +55,7 @@ class _ContadorScreenState extends State<ContadorScreen> {
           FloatingActionButton(
             onPressed: _restarContador,
             tooltip: 'Restar',
-            backgroundColor: Colors.redAccent,
+            backgroundColor: Colors.redAccent, 
             child: const Icon(Icons.remove),
           ),
           const SizedBox(width: 16),
@@ -63,7 +69,7 @@ class _ContadorScreenState extends State<ContadorScreen> {
           FloatingActionButton(
             onPressed: _incrementarContador,
             tooltip: 'Incrementar',
-            backgroundColor: Colors.green,
+            backgroundColor: primaryColor, 
             child: const Icon(Icons.add),
           ),
         ],

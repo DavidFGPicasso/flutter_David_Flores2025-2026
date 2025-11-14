@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
+import '../main.dart'; 
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final Color menuColor = Theme.of(context).appBarTheme.backgroundColor ?? Colors.green;
+
     return Drawer(
       child: SafeArea(
-        child: Scrollbar( 
+        child: Scrollbar(
+          thumbVisibility: true,
           child: ListView(
             padding: EdgeInsets.zero,
-            shrinkWrap: true, 
+            physics: const AlwaysScrollableScrollPhysics(),
             children: [
               Container(
-                height: 80, 
-                color: Colors.indigo,
+                height: 80,
+                color: menuColor,
                 alignment: Alignment.centerLeft,
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: const Text(
@@ -35,13 +39,32 @@ class CustomDrawer extends StatelessWidget {
               _drawerItem(context, 'Perfil tipo Instagram', '/instagram'),
               _drawerItem(context, 'Colores Aleatorios', '/colores-aleatorios'),
               _drawerItem(context, 'Imagen Aleatoria', '/imagen-aleatoria'),
+
+              // Botón para cambiar el tema a Azul
+              ListTile(
+                leading: const Icon(Icons.color_lens, color: Colors.blue),
+                title: const Text('Cambiar a Azul'),
+                onTap: () {
+                  Navigator.pop(context);
+                  context.findAncestorStateOfType<MyAppState>()?.changeTheme(Colors.blue);
+                },
+              ),
+              // Botón para restaurar el tema original
+              ListTile(
+                leading: const Icon(Icons.restore, color: Colors.green),
+                title: const Text('Restaurar Tema Original'),
+                onTap: () {
+                  Navigator.pop(context);
+                  context.findAncestorStateOfType<MyAppState>()?.resetTheme();
+                },
+              ),
             ],
           ),
         ),
       ),
     );
   }
-  // Función para devolver los ListTile.
+
   Widget _drawerItem(BuildContext context, String title, String route) {
     return ListTile(
       title: Text(title),

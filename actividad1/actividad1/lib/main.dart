@@ -1,19 +1,112 @@
 import 'package:flutter/material.dart';
 import 'screens/screens.dart';
 
-
 void main() => runApp(const MyApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key}); 
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => MyAppState();
+}
+
+class MyAppState extends State<MyApp> {
+  // Tema original 
+  final ThemeData defaultTheme = ThemeData(
+    primarySwatch: Colors.green,
+    scaffoldBackgroundColor: Colors.white,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Colors.green,
+      foregroundColor: Colors.white,
+      elevation: 4,
+      centerTitle: true,
+      titleTextStyle: TextStyle(
+        fontSize: 22,
+        fontWeight: FontWeight.bold,
+        color: Colors.white,
+      ),
+    ),
+    textTheme: const TextTheme(
+      bodyLarge: TextStyle(fontSize: 18, color: Colors.black87),
+      bodyMedium: TextStyle(fontSize: 16, color: Colors.black54),
+      titleLarge: TextStyle(
+        fontSize: 22,
+        fontWeight: FontWeight.bold,
+        color: Colors.green,
+      ),
+    ),
+  );
+
+  // Tema actual.
+  ThemeData currentTheme = ThemeData(
+    primarySwatch: Colors.green,
+    scaffoldBackgroundColor: Colors.white,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Colors.green,
+      foregroundColor: Colors.white,
+      elevation: 4,
+      centerTitle: true,
+      titleTextStyle: TextStyle(
+        fontSize: 22,
+        fontWeight: FontWeight.bold,
+        color: Colors.white,
+      ),
+    ),
+    textTheme: const TextTheme(
+      bodyLarge: TextStyle(fontSize: 18, color: Colors.black87),
+      bodyMedium: TextStyle(fontSize: 16, color: Colors.black54),
+      titleLarge: TextStyle(
+        fontSize: 22,
+        fontWeight: FontWeight.bold,
+        color: Colors.green,
+      ),
+    ),
+  );
+
+  // Cambiar el tema a un color específico.
+  void changeTheme(Color color) {
+    setState(() {
+      currentTheme = ThemeData(
+        primarySwatch: Colors.green,
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: AppBarTheme(
+          backgroundColor: color,
+          foregroundColor: Colors.white,
+          elevation: 4,
+          centerTitle: true,
+          titleTextStyle: const TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+        textTheme: TextTheme(
+          bodyLarge: const TextStyle(fontSize: 18, color: Colors.black87),
+          bodyMedium: const TextStyle(fontSize: 16, color: Colors.black54),
+          titleLarge: TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+            color: color,
+          ),
+        ),
+      );
+    });
+  }
+
+  // Método Restaurar el tema original.
+  void resetTheme() {
+    setState(() {
+      currentTheme = defaultTheme;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Drawer Personalizado',
-      theme: ThemeData(primarySwatch: Colors.indigo),
-      initialRoute: '/', 
+      theme: currentTheme,
+      initialRoute: '/',
       routes: {
         '/': (context) => const NombreApellidosScreen(),
         '/imagen-personal': (context) => const ImagenPersonalScreen(),
