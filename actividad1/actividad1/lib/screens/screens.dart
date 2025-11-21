@@ -11,3 +11,4 @@ export 'contador_screen.dart';
 export 'ventana_instagram_screen.dart';
 export 'colores_aleatorios_screen.dart';
 export 'imagen_aleatoria_screen.dart';
+export 'splash_screen.dart';

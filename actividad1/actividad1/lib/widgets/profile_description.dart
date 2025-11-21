@@ -15,7 +15,7 @@ class ProfileDescription extends StatelessWidget {
           const Text('Kagura'),
           const Text('Shinpachi Shimura'),
           const Text('Be forever yorozuya'),
-          const Text('bit.ly/2w9g74q', style: TextStyle(color: Colors.blue)),
+          const Text('https://github.com/DavidFGPicasso/flutter_David_Flores2025-2026.git', style: TextStyle(color: Colors.blue)),
           const SizedBox(height: 4),
           RichText(
             text: const TextSpan(

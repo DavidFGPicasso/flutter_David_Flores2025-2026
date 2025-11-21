@@ -50,13 +50,13 @@ class ImagenesResponsiveScreen extends StatelessWidget {
                   Column(
                     children: [
                       Image.asset(
-                        'assets/images/fresa.jpg',
+                        'assets/images/uva.jpg',
                         width: imagenWidth,
                         height: imagenHeight,
                         fit: BoxFit.contain,
                       ),
                       const SizedBox(height: 8),
-                      const Text('Fresa'),
+                      const Text('Uva'),
                     ],
                   ),
                   SizedBox(width: separacionHorizontal),
@@ -82,13 +82,13 @@ class ImagenesResponsiveScreen extends StatelessWidget {
                   Column(
                     children: [
                       Image.asset(
-                        'assets/images/melon.jpg',
+                        'assets/images/coco.webp',
                         width: imagenWidth,
                         height: imagenHeight,
                         fit: BoxFit.contain,
                       ),
                       const SizedBox(height: 8),
-                      const Text('Melón'),
+                      const Text('Coco'),
                     ],
                   ),
                   SizedBox(width: separacionHorizontal),
@@ -108,13 +108,13 @@ class ImagenesResponsiveScreen extends StatelessWidget {
                   Column(
                     children: [
                       Image.asset(
-                        'assets/images/platano.jpg',
+                        'assets/images/banana.jpg',
                         width: imagenWidth,
                         height: imagenHeight,
                         fit: BoxFit.contain,
                       ),
                       const SizedBox(height: 8),
-                      const Text('Plátano'),
+                      const Text('banana'),
                     ],
                   ),
                 ],

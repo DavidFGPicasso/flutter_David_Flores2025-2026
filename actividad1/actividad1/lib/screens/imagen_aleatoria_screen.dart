@@ -70,7 +70,7 @@ class _ImagenAleatoriaScreenState extends State<ImagenAleatoriaScreen> {
             child: GestureDetector(
               onTap: onImageTap,
               child: Image.asset(
-                'assets/images/perro.jpg',
+                'assets/images/estrella.png',
                 width: imageSize,
                 height: imageSize,
                 fit: BoxFit.cover,

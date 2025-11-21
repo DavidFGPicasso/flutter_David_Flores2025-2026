@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/screens.dart';
+import 'screens/screens.dart'; 
 
 void main() => runApp(const MyApp());
 
@@ -37,7 +37,7 @@ class MyAppState extends State<MyApp> {
     ),
   );
 
-  // Tema actual.
+  // Tema actual
   ThemeData currentTheme = ThemeData(
     primarySwatch: Colors.green,
     scaffoldBackgroundColor: Colors.white,
@@ -63,7 +63,7 @@ class MyAppState extends State<MyApp> {
     ),
   );
 
-  // Cambiamos el tema a un color específico.
+  // Cambiar el tema a un color específico
   void changeTheme(Color color) {
     setState(() {
       currentTheme = ThemeData(
@@ -93,7 +93,7 @@ class MyAppState extends State<MyApp> {
     });
   }
 
-  // Método Restaurar el tema original.
+  // Restaurar el tema original
   void resetTheme() {
     setState(() {
       currentTheme = defaultTheme;
@@ -106,8 +106,9 @@ class MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Drawer Personalizado',
       theme: currentTheme,
-      initialRoute: '/',
+      initialRoute: '/splash', 
       routes: {
+        '/splash': (context) => const SplashScreen(),
         '/': (context) => const NombreApellidosScreen(),
         '/imagen-personal': (context) => const ImagenPersonalScreen(),
         '/miniaturas': (context) => const MiniaturasScreen(),

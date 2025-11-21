@@ -15,7 +15,7 @@ class ImagenesDispuestasScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: const [
             Image(
-              image: AssetImage('assets/images/agua.jpg'),
+              image: AssetImage('assets/images/paloma.webp'),
               width: 200,
               height: 200,
               fit: BoxFit.cover,
@@ -29,7 +29,7 @@ class ImagenesDispuestasScreen extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Image(
-              image: AssetImage('assets/images/agua.jpg'),
+              image: AssetImage('assets/images/paloma.webp'),
               width: 200,
               height: 200,
               fit: BoxFit.cover,
