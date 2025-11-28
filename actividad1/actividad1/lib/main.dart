@@ -122,6 +122,8 @@ class MyAppState extends State<MyApp> {
         '/instagram': (context) => const VentanaInstagramScreen(),
         '/colores-aleatorios': (context) => const ColoresAleatoriosScreen(),
         '/imagen-aleatoria': (context) => const ImagenAleatoriaScreen(),
+        '/adivina-numero': (context) => const AdivinaNumeroScreen(),   
+        '/preferencias': (context) => const PreferenciasScreen(),
       },
     );
   }

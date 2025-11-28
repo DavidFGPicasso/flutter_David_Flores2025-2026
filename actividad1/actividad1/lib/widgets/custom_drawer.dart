@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../main.dart'; // Para acceder a MyAppState
+import '../main.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -12,7 +12,7 @@ class CustomDrawer extends StatelessWidget {
       child: SafeArea(
         child: ListView(
           padding: EdgeInsets.zero,
-          physics: const AlwaysScrollableScrollPhysics(), 
+          physics: const AlwaysScrollableScrollPhysics(),
           children: [
             Container(
               height: 80,
@@ -37,6 +37,12 @@ class CustomDrawer extends StatelessWidget {
             _drawerItem(context, 'Perfil tipo Instagram', '/instagram'),
             _drawerItem(context, 'Colores Aleatorios', '/colores-aleatorios'),
             _drawerItem(context, 'Imagen Aleatoria', '/imagen-aleatoria'),
+
+            // ✅ Nuevos formularios añadidos
+            _drawerItem(context, 'Adivina el Número', '/adivina-numero'),
+            _drawerItem(context, 'Preferencias', '/preferencias'),
+
+            const Divider(),
 
             // Botón para cambiar el tema a Azul
             ListTile(

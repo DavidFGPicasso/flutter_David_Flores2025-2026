@@ -12,3 +12,5 @@ export 'ventana_instagram_screen.dart';
 export 'colores_aleatorios_screen.dart';
 export 'imagen_aleatoria_screen.dart';
 export 'splash_screen.dart';
+export 'adivina_numero_screen.dart';
+export 'preferencias_screen.dart';
