@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../widgets/custom_drawer.dart';
 import 'dart:math';
 
 class AdivinaNumeroScreen extends StatefulWidget {
@@ -29,6 +30,7 @@ class _AdivinaNumeroScreenState extends State<AdivinaNumeroScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const CustomDrawer(),
       appBar: AppBar(title: const Text('Adivina el número')),
       body: Padding(
         padding: const EdgeInsets.all(20),
