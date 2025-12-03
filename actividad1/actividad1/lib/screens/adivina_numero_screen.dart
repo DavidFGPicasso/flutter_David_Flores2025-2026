@@ -23,7 +23,7 @@ class _AdivinaNumeroScreenState extends State<AdivinaNumeroScreen> {
     } else if (numero > _numeroSecreto) {
       setState(() => _mensaje = 'Demasiado alto');
     } else {
-      setState(() => _mensaje = '¡Correcto! Has adivinado el número 🎉');
+      setState(() => _mensaje = '¡Correcto! Has adivinado el número');
     }
   }
 
