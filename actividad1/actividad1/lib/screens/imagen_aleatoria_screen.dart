@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 import 'dart:async';
+import 'package:shared_preferences/shared_preferences.dart'; 
 import '../../widgets/custom_drawer.dart';
 
 class ImagenAleatoriaScreen extends StatefulWidget {
@@ -21,7 +22,19 @@ class _ImagenAleatoriaScreenState extends State<ImagenAleatoriaScreen> {
   @override
   void initState() {
     super.initState();
+    _loadPoints();       
     startGameLoop();
+  }
+
+  Future<void> _loadPoints() async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      points = prefs.getInt('points') ?? 0; 
+    });
+  }
+  Future<void> _savePoints() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('points', points);
   }
 
   void startGameLoop() {
@@ -31,10 +44,10 @@ class _ImagenAleatoriaScreenState extends State<ImagenAleatoriaScreen> {
       }
       tapped = false;
       setRandomPosition();
+      _savePoints(); 
       setState(() {});
     });
   }
-
   void setRandomPosition() {
     final screenSize = MediaQuery.of(context).size;
     final maxX = screenSize.width - imageSize;
@@ -48,6 +61,7 @@ class _ImagenAleatoriaScreenState extends State<ImagenAleatoriaScreen> {
   void onImageTap() {
     tapped = true;
     points += 1;
+    _savePoints(); 
     setState(() {});
   }
 
